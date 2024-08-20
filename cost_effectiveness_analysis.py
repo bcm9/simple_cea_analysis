@@ -9,7 +9,7 @@ Script compares two different interventions, calculating the total cost, health 
 4. Compute the Incremental Cost-Effectiveness Ratio (ICER) to determine the cost per additional QALY gained when one intervention is used instead of the other.
 5. Print which intervention provides better value for money based on the cost per QALY ratio and the ICER.
 
-Checked against:
+Checked with:
     https://www.valueanalyticslabs.com/icer-calculator/
     https://awttc.nhs.wales/files/training-repository/factsheet-4-economic-evaluation-for-healthcare-resource-allocation/
 
@@ -116,7 +116,7 @@ x = [min(-2, delta_qaly * 1.2), max(2, delta_qaly * 1.2)]
 y = [x * icer for x in x]
 plt.plot(x, y, color='#1f77b4', linestyle='--', label='Cost/QALY')
 # Expanding the axes limits
-plt.xlim(min(-delta_qaly*1.2, delta_qaly * 1.2), max(0.005, delta_qaly * 1.2))
+plt.xlim(min(-delta_qaly * 1.2, delta_qaly * 1.2), max(0.005, delta_qaly * 1.2))
 plt.ylim(min(-delta_cost * 1.2, delta_cost * 1.2), max(100, delta_cost * 1.2))
 x_values = [min(-5, delta_qaly * 1.2), max(5, delta_qaly * 1.2)]
 y_values = [x * wtp for x in x_values]
