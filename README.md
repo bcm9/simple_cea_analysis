@@ -1,7 +1,4 @@
-# simple_cea_analysis
-A Python script for performing a simple cost-effectiveness analysis (CEA) on healthcare interventions
-
-# Cost-Effectiveness Analysis (CEA) Script
+# Simple Cost-Effectiveness Analysis (CEA) Script
 
 This Python script performs a simple deterministic cost-effectiveness analysis (CEA) to compare two healthcare interventions. The analysis includes the calculation of total costs, health outcomes in Quality-Adjusted Life Years (QALYs), and the Incremental Cost-Effectiveness Ratio (ICER).
 
