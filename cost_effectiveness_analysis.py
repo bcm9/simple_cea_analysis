@@ -107,14 +107,14 @@ delta_qaly = qaly_intervention_A - qaly_intervention_B
 # Create a scatter plot with expanded limits
 plt.figure(figsize=(8, 6))
 plt.rcParams['font.family'] = 'Calibri'
-plt.scatter(delta_qaly, delta_cost, color='white', label='Base case ICER',s=100, edgecolors='#1f77b4')
+plt.scatter(delta_qaly, delta_cost, color='#3498db', label='Base case ICER', s=100, edgecolors='#2980b9', zorder=5)
 plt.axhline(0, color='black', linestyle='-')  # Horizontal zero line
 plt.axvline(0, color='black', linestyle='-')  # Vertical zero line
 
 # Plot CEA line
 x = [min(-2, delta_qaly * 1.2), max(2, delta_qaly * 1.2)]
 y = [x * icer for x in x]
-plt.plot(x, y, color='#1f77b4', linestyle='-.', label='Cost/QALY')
+plt.plot(x, y, color='#1f77b4', linestyle='--', label='Cost/QALY')
 # Expanding the axes limits
 plt.xlim(min(-delta_qaly*1.2, delta_qaly * 1.2), max(0.005, delta_qaly * 1.2))
 plt.ylim(min(-delta_cost * 1.2, delta_cost * 1.2), max(100, delta_cost * 1.2))
