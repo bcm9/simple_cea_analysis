@@ -126,8 +126,8 @@ y_values = [x * wtp for x in x_values]
 plt.plot(x_values, y_values, color='#d62728', linestyle=':', label='WTP threshold')
 
 # Formatting plot
-plt.xticks(fontsize=14)  # You can change the fontsize to any desired size
-plt.yticks(fontsize=14)  # You can change the fontsize to any desired size
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
 plt.xlabel(r'$\Delta$ QALYs', fontsize=18, fontweight='bold')
 plt.ylabel(r'$\Delta$ Cost (£)', fontsize=18, fontweight='bold')
 plt.title('Cost-Effectiveness Plane', fontsize=18, fontweight='bold')
