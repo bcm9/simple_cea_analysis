@@ -116,8 +116,8 @@ x = [min(-2, delta_qaly * 1.2), max(2, delta_qaly * 1.2)]
 y = [x * icer for x in x]
 plt.plot(x, y, color='#1f77b4', linestyle='--', label='Cost/QALY')
 # Expanding the axes limits
-plt.xlim(min(-delta_qaly * 1.2, delta_qaly * 1.2), max(0.005, delta_qaly * 1.2))
-plt.ylim(min(-delta_cost * 1.2, delta_cost * 1.2), max(100, delta_cost * 1.2))
+plt.xlim(-delta_qaly * 1.2, delta_qaly * 1.2)
+plt.ylim(-delta_cost * 1.2, delta_cost * 1.2)
 x_values = [min(-5, delta_qaly * 1.2), max(5, delta_qaly * 1.2)]
 y_values = [x * wtp for x in x_values]
 plt.plot(x_values, y_values, color='#d62728', linestyle=':', label='WTP threshold')
