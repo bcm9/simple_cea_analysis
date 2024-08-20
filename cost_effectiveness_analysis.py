@@ -36,8 +36,8 @@ number_of_visits_B = 0
 number_of_tests_B = 0 
 
 # Parameters for discounting future costs and QALYs to their present values
-discount_rate = 0.0  # Discount rate of 3.5% according to NICE guidelines
-years = 0             # Time horizon of 5 years for the analysis
+discount_rate = 0.0  # Discount rate according to NICE guidelines is 3.5%
+years = 0             # Time horizon for the analysis
 
 # Willingness to pay threshold
 wtp = 20000  # £20,000 per QALY
@@ -115,12 +115,17 @@ plt.axvline(0, color='black', linestyle='-')  # Vertical zero line
 x = [min(-2, delta_qaly * 1.2), max(2, delta_qaly * 1.2)]
 y = [x * icer for x in x]
 plt.plot(x, y, color='#1f77b4', linestyle='--', label='Cost/QALY')
+
 # Expanding the axes limits
 plt.xlim(-delta_qaly * 1.2, delta_qaly * 1.2)
 plt.ylim(-delta_cost * 1.2, delta_cost * 1.2)
+
+# Plot WTP threshold
 x_values = [min(-5, delta_qaly * 1.2), max(5, delta_qaly * 1.2)]
 y_values = [x * wtp for x in x_values]
 plt.plot(x_values, y_values, color='#d62728', linestyle=':', label='WTP threshold')
+
+# Formatting plot
 plt.xticks(fontsize=14)  # You can change the fontsize to any desired size
 plt.yticks(fontsize=14)  # You can change the fontsize to any desired size
 plt.xlabel(r'$\Delta$ QALYs', fontsize=18, fontweight='bold')
